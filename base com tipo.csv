@@ -1,0 +1,87 @@
+Categoria,Pergunta,id1,id2,id3,id4,id5,id6,id7,id8,id9,id10
+AUTONOMIA,Apresento sugestões para melhorar o funcionamento do setor onde trabalho,3,5,5,3,5,5,5,4,5,4
+AUTONOMIA,"Busco conhecimento das tarefas por iniciativa própria, observando e fazendo",5,5,3,1,5,5,5,4,5,4
+AUTONOMIA,Identifico e ajo sobre procedimentos burocráticos que atrasam a realização das minhas tarefas,3,5,3,5,3,5,5,1,5,5
+AUTONOMIA,Tenho liberdade para fazer o meu trabalho da forma como considero melhor,5,5,4,5,5,5,4,5,5,5
+CONDIÇÕES DO AMBIENTE DE TRABALHO,A empresa fornece os equipamentos necessários ao desempenho eficaz,5,5,5,4,5,5,5,5,5,5
+CONDIÇÕES DO AMBIENTE DE TRABALHO,A empresa mantém seguros os locais de trabalho,5,5,5,2,3,5,5,5,5,4
+CONDIÇÕES DO AMBIENTE DE TRABALHO,Me sinto confortável em meu local de trabalho,5,5,5,4,5,5,5,5,5,5
+CONDIÇÕES DO AMBIENTE DE TRABALHO,Meu local de trabalho dificulta a comunicação entre os setores da empresa,1,1,4,1,2,5,1,5,1,1
+CONDIÇÕES DO AMBIENTE DE TRABALHO,O ambiente de trabalho facilita o relacionamento entre os funcionários,5,3,4,5,5,5,5,3,5,4
+EFICÁCIA ,As atividades que desempenho permitem que eu faça bom uso de minhas qualificações e habilidades,5,3,5,5,5,5,5,5,5,5
+EFICÁCIA ,Me considero uma pessoa pró-ativa dentro da empresa,5,3,4,3,5,5,4,5,4,5
+EFICÁCIA ,Sinto que minhas habilidades e qualificações auxiliam no desempenho das minhas atividades,5,5,4,3,5,5,5,5,5,5
+EFICÁCIA ,Sou capaz de cumprir minhas obrigações no trabalho,5,5,5,5,5,5,5,5,5,5
+EFICÁCIA ,Sou capaz de resolver problemas no meu trabalho,5,5,4,5,5,5,5,5,5,4
+ENVOLVIMENTO E COMPROMETIMENTO, Busco novos conhecimentos que podem acrescentar no meu trabalho,5,5,5,1,5,5,5,4,5,3
+ENVOLVIMENTO E COMPROMETIMENTO,Eu sinto que deveria ser incluído na definição de metas e objetivos da empresa ,3,3,3,2,5,5,5,4,5,2
+ENVOLVIMENTO E COMPROMETIMENTO,Me considero um colaborador que veste a camisa da empresa,5,5,5,5,5,5,5,5,5,5
+ENVOLVIMENTO E COMPROMETIMENTO,Me sinto realizado quando a empresa alcança algum objetivo,5,5,5,5,5,5,5,5,5,5
+ESTILO GERENCIAL AUTORITÁRIO*,A chefia é receptiva às críticas relativas ao trabalho,5,5,5,5,4,4,5,4,5,4
+ESTILO GERENCIAL AUTORITÁRIO*,As lideranças da organização são resistentes a mudanças,1,1,3,2,1,1,1,3,5,3
+ESTILO GERENCIAL AUTORITÁRIO*,Os chefes valorizam novas ideias e propostas criativas de trabalho feitas pelos seus colaboradores,5,5,5,4,5,5,5,5,5,5
+ESTILO GERENCIAL DEMOCRÁTICO*,A chefia aceita ideias diferentes das dela,5,5,5,3,3,4,5,4,5,5
+ESTILO GERENCIAL DEMOCRÁTICO*,Os chefes estimulam a apresentação de novas ideias no trabalho,4,5,4,5,5,5,5,5,5,5
+ESTILO GERENCIAL DEMOCRÁTICO*,Os gerentes estimulam os funcionários dos grupos à participação na tomada de decisões,5,5,4,3,5,5,5,4,5,5
+ESTILO GERENCIAL LIBERAL*,A chefia da empresa dá liberdade de trabalho aos funcionários que se mostram seguros diante da tarefa a ser executada,5,5,5,4,5,5,5,5,5,5
+ESTILO GERENCIAL LIBERAL*,Os chefes dão liberdade de trabalho aos funcionários que se mostram motivados para executar a tarefa,5,5,5,5,5,5,5,5,5,5
+ESTILO GERENCIAL LIBERAL*,Os gerentes confiam no trabalho de seus colaboradores ,4,5,5,5,5,5,5,5,5,5
+FEEDBACK,"A empresa é aberta a receber e reconhecer as críticas, opiniões e contribuições de seus funcionários",4,5,5,5,4,5,5,4,5,5
+FEEDBACK,"Acho positivo quando comentam, criticam ou dão opinião sobre o meu trabalho",4,5,4,5,5,5,5,4,5,4
+FEEDBACK,Aviso meus colegas quando acho que eles cometeram um erro ao realizar uma atividade,5,5,5,3,5,5,5,5,5,5
+FEEDBACK,Elogio meus colegas pelas suas conquistas frequentemente,3,3,3,4,3,5,5,4,5,5
+FEEDBACK,"Me sinto confortável em realizar críticas, comentários e dar opiniões sobre o trabalho dos demais membros",1,3,4,1,5,5,5,3,5,4
+FEEDBACK,"Meus chefes falam diretamente comigo, não mandam recado pelos outros",5,5,5,5,5,5,5,5,5,5
+FEEDBACK,O diálogo é utilizado para resolver os problemas da empresa,5,5,5,3,5,5,5,5,5,5
+FEEDBACK,"Os funcionários são abertos a receber e reconhecer as críticas, opiniões e contribuições entre si",2,5,5,2,1,1,5,4,5,3
+INTEGRAÇÃO,Entendo que a comunicação entre os setores é eficiente,2,5,5,4,3,4,5,4,5,5
+INTEGRAÇÃO,Existe um relacionamento de cooperação entre os departamentos da empresa,5,5,5,4,5,4,5,5,5,4
+INTEGRAÇÃO,Geralmente conversa-se sobre coisas importantes que estão acontecendo nessa organização,2,5,4,5,5,5,5,5,5,4
+INTEGRAÇÃO,Me sinto confortável em pedir ajuda aos membros de outros setores,5,5,5,5,5,5,5,5,5,5
+INTEGRAÇÃO,Sou bem atendido quando preciso recorrer a outro setor,5,5,5,5,5,5,5,4,5,4
+LIDERANÇA,A chefia mostra-se acessível aos funcionários,5,5,4,5,5,5,5,4,5,5
+LIDERANÇA,A delegação de tarefas por parte da diretoria é feita de maneira eficiente,4,5,4,4,4,5,5,4,5,5
+LIDERANÇA,Os chefes cobram suficientemente para que eu alcance resultados no trabalho,4,5,2,5,3,5,5,4,5,4
+LIDERANÇA,Os chefes têm um discurso condizente com suas ações,4,5,5,5,5,5,5,5,5,4
+LIDERANÇA,Os diretores têm clareza da direção e das metas definidas pela organização para o cumprimento das atividades sob sua responsabilidade,4,5,4,2,5,5,5,5,5,4
+LIDERANÇA,Os funcionários confiam no trabalho realizado pelos chefes da MCH,5,5,5,5,5,5,5,5,5,5
+LIDERANÇA,Os líderes demonstram respeito pelas ideias dos funcionários,5,5,5,5,5,5,5,5,5,5
+MOTIVAÇÃO,Acho que este é um excelente lugar para se trabalhar,5,5,5,5,5,5,5,5,5,5
+MOTIVAÇÃO,Considero que as pessoas trabalham felizes aqui na empresa,4,5,5,4,5,5,5,5,5,5
+MOTIVAÇÃO,Gosto do trabalho que realizo,5,3,4,5,5,5,5,5,5,5
+MOTIVAÇÃO,Me sinto recompensado pelo trabalho que realizo,5,4,4,4,5,5,5,3,5,5
+MOTIVAÇÃO,O trabalho que realizo é motivador e interessante,5,5,4,3,5,5,5,5,5,5
+MOTIVAÇÃO,Sinto que sou valorizado e que posso fazer a diferença,5,4,5,2,5,5,5,4,5,5
+ORIENTAÇÃO A RESULTADOS,A empresa foca no alinhamento da equipe em torno dos objetivos,4,5,4,4,5,5,5,5,5,4
+ORIENTAÇÃO A RESULTADOS,Há rigidez no cumprimentos dos prazos estabelecidos?,3,4,3,4,3,1,5,3,5,4
+ORIENTAÇÃO A RESULTADOS,Sinto que estou sendo bem orientado para os objetivos que a empresa gostaria que eu alcançasse,2,4,4,3,5,5,5,5,5,5
+ORIENTAÇÃO A RESULTADOS,Sinto que meu trabalho contribui para os resultados do meu time,5,3,4,3,5,5,,4,5,5
+RELACIONAMENTO INTERPESSOAL,"Em meu trabalho, contribuo ativamente para a felicidade e o bem-estar dos outros",4,5,4,5,4,5,5,5,5,4
+RELACIONAMENTO INTERPESSOAL,Eu me sinto usualmente incluído nos grupos sociais do dia a dia pelas outras pessoas,5,5,5,4,5,5,5,4,1,4
+RELACIONAMENTO INTERPESSOAL,"Na empresa, há um clima de confiança entre os colegas de trabalho",5,5,5,5,5,4,5,5,5,5
+RELACIONAMENTO INTERPESSOAL,"No meu setor, existe um ambiente social agradável",5,5,5,4,5,5,5,5,5,5
+RELACIONAMENTO INTERPESSOAL,"No meu setor, há respeito de um pelo outro",5,5,5,5,5,5,5,5,5,4
+RELACIONAMENTO INTERPESSOAL,"No meu setor, não existem intrigas entre pessoas",3,5,2,4,3,3,5,2,5,2
+SOBRECARGA NO TRABALHO,A quantidade de trabalho é considerada mais importante do que a sua qualidade,1,1,1,3,1,1,1,1,1,1
+SOBRECARGA NO TRABALHO,Existem pessoas ociosas na empresa,3,1,1,2,2,3,1,2,5,4
+SOBRECARGA NO TRABALHO,Me sinto sobrecarregado(a) em minhas funções,3,3,1,1,2,3,1,2,1,2
+SOBRECARGA NO TRABALHO,"Por causa das demandas do meu trabalho, não consigo fazer as coisas que quero fazer em casa ",2,3,1,3,1,5,1,3,1,2
+SOBRECARGA NO TRABALHO,Sinto que a empresa suga minhas energias,2,1,1,1,1,1,1,2,1,1
+SUCESSO NA CARREIRA,As oportunidades de promoção que vejo pela frente são coerentes com os meus interesses,5,4,3,3,5,5,5,5,5,5
+SUCESSO NA CARREIRA,Me sinto satisfeito com o salário e os benefícios que recebo dentro da MCH,5,5,5,5,5,5,5,5,5,5
+SUCESSO NA CARREIRA,Sinto uma relação próxima e proporcional entre o meu sucesso e o sucesso da empresa,5,5,5,5,5,5,5,5,5,5
+SUCESSO NA CARREIRA,Sou competente na realização das minhas atividades profissionais,5,5,4,3,5,5,5,3,5,5
+SUCESSO NA CARREIRA,Sou reconhecido pelos colegas de trabalho,4,4,5,2,5,5,5,4,5,4
+SUCESSO NA CARREIRA,Sou reconhecido pelos meus superiores,5,4,4,3,5,5,5,5,5,4
+TRABALHO EM EQUIPE, Sinto que minha equipe trabalha como um verdadeiro time,5,5,5,4,5,4,5,4,5,4
+TRABALHO EM EQUIPE,A empresa estimula o trabalho em equipe,5,5,5,5,5,5,5,3,5,5
+TRABALHO EM EQUIPE,Existe um diálogo claro no momento de delegação e de divisão de tarefas,2,5,5,3,5,5,5,5,5,5
+TRABALHO EM EQUIPE,Há espírito de colaboração na equipe em que atuo,4,5,5,5,4,4,5,4,5,5
+TRABALHO EM EQUIPE,"Na empresa, o grupo se auxilia mutuamente",4,5,5,5,5,4,5,4,5,4
+TRABALHO EM EQUIPE,No meu setor existe espírito de solidariedade entre as pessoas,4,5,4,5,5,5,5,5,5,5
+TRABALHO EM EQUIPE,Tenho confiança no trabalho dos demais membros,4,5,4,4,3,5,5,4,5,5
+TRANSPARÊNCIA,A chefia me informa sobre os fatos importantes que estão acontecendo na empresa ,4,5,4,4,5,5,5,3,5,4
+TRANSPARÊNCIA,A empresa consulta o funcionário antes de promover mudanças no trabalho,5,5,3,5,3,5,5,5,5,5
+TRANSPARÊNCIA,Clareza é uma característica nas atuações dos gestores ,4,5,5,3,5,5,5,5,5,5
+TRANSPARÊNCIA,Essa organização considera meus interesses quando toma decisões que me afetam,4,5,4,5,5,5,5,4,1,3
+TRANSPARÊNCIA,Sou informado sobre as mudanças de processos que afetam o meu trabalho,5,5,4,4,5,5,5,4,5,5
