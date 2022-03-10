@@ -151,7 +151,7 @@ Row {data-width=350}
 ```{r}
 renderValueBox({
         valueBox(
-            value = mean(dados$media[dados$Categoria==input$categoria]), color = "#D0EBE8")
+            value = round(mean(dados$media[dados$Categoria==input$categoria]), 2), color = "#D0EBE8")
         
     })
 ```
@@ -161,7 +161,7 @@ renderValueBox({
 ```{r}
 renderValueBox({
         valueBox(
-            value = max(dados$media[dados$Categoria==input$categoria]), color = "#D0EBE8"
+            value = round(max(dados$media[dados$Categoria==input$categoria]), 2), color = "#D0EBE8"
         )
     })
 ```
@@ -172,7 +172,7 @@ renderValueBox({
 ```{r}
 renderValueBox({
         valueBox(
-            value = min(dados$media[dados$Categoria==input$categoria]), color = "#D0EBE8"
+            value = round(min(dados$media[dados$Categoria==input$categoria]), 2), color = "#D0EBE8"
         )
     })
 ```
