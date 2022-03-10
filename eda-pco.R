@@ -28,7 +28,12 @@ dados$Categoria <- as.factor(dados$Categoria)
 
 dados <- dados %>% 
   mutate(media = (id1 + id2 + id3 + id4 + id5 + id6 + id7 + id8 + id9 + id10)/10) %>% 
-  mutate(dp = rowSds(as.matrix(dados[,c(3,4,5,6,7,8,9,10,11,12)])))
+  mutate(dp = rowSds(as.matrix(dados[,c(3,4,5,6,7,8,9,10,11,12)]))) 
+
+dados$aval[dados$media<=2] <- 'Insatisfeito'
+dados$aval[2<dados$media&dados$media<=4] <- 'Neutro'
+dados$aval[dados$media>4] <- 'Satisfeito'
+
 
 ggplot(dados, aes(x = media)) +
   geom_histogram(color = "white", fill = "#4fb6a7") +

@@ -1,82 +1,179 @@
 ---
-title: "Visualização de PCO"
-author: "EstatMG - Sofia Aguiar"
-output: html_document
+title: "Visualização da Pesquisa de Clima Organizacional"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+      bg: "#101010"
+      fg: "#4fb6a7" 
+      primary: "#4fb6a7"
+      navbar-bg: "#4fb6a7"
+      base_font: 
+        google: Montserrat
+      heading_font:
+        google: Montserrat
+      code_font:
+        google: Montserrat
 runtime: shiny
 ---
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+library(flexdashboard)
 library(tidyverse)
+library(gt)
+library(lubridate)
+library(ggthemes)
+library(matrixStats)
+library(plotly)
 
-dados <- read_csv("base de dados.csv")
+cores_verde <- colorRampPalette(c("#4fb6a7","#D0EBE8"))
+cores_roxo <- colorRampPalette(c("#652177", "#D6C5DB"))
+cores<- colorRampPalette(c("#4fb6a7","#652177"))
+cores2<- colorRampPalette(c("#4fb6a7","#D0EBE8","#D6C5DB","#652177"))
 
-dados[is.na(dados)] <- 0
+tema <- theme_hc()+ 
+  theme(axis.title.y = element_text(angle = 90,
+                                    margin = margin(0.3, 0.5, 0.3, 0, "cm")),
+                          legend.position = "right",
+                          plot.margin = margin(0.3, 1, 0.3, 1, "cm"))
+theme_set(tema)
 
-dados$score <- apply(dados[3:88], 1, mean)
 
+
+dados <- read_csv('base com tipo.csv')
+
+
+dados <- replace(x = dados, list = is.na(dados), values = 0)
+dados$Categoria <- as.factor(dados$Categoria)
 dados <- dados %>% 
-  mutate(rank = min_rank(dados$score))
-```
-  
-    
-Esse é um documento interativo, criado para visualizar melhor os resultados da pesquisa de PCO - Pesquisa de Clima Organizacional.   
-Aqui podemos visualizar o resultado final do score dos dez funcionários entrevistados, além dos resultados individuais de cada questionamento.
+  mutate(media = (id1 + id2 + id3 + id4 + id5 + id6 + id7 + id8 + id9 + id10)/10) %>% 
+  mutate(dp = rowSds(as.matrix(dados[,c(3,4,5,6,7,8,9,10,11,12)]))) 
 
-### Score final
-
-You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change.  This demonstrates how a standard R plot 'can be made interactive by wrapping it in the Shiny `renderPlot` function. The `selectInput` and `sliderInput` functions create the input widgets used to drive the plot.
-
-
-```{r, echo=FALSE, warning=FALSE}
-
-ggplot(dados, aes(x = dados$score, fill = as.factor(dados$rank))) +
-  geom_bar(width = 0.15) +
-  theme_gray() +
-  scale_fill_brewer(palette = 'Greens') +
-  scale_x_continuous('Score final', limits = c(1, 5)) +
-  theme(legend.position="none")
 
 ```
 
 
-```{r eruptions, echo=FALSE}
-inputPanel(
-  selectInput("n_breaks", label = "Number of bins:",
-              choices = c(10, 20, 35, 50), selected = 20),
-  
-  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-              min = 0.2, max = 2, value = 1, step = 0.2)
-)
 
-renderPlot({
-  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
-       xlab = "Duration (minutes)", main = "Geyser eruption duration")
-  
-  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
-  lines(dens, col = "blue")
-})
+```{css}
+.value-box {
+  height: 200px;
+}
+
 ```
 
-## Embedded Application
 
-It's also possible to embed an entire Shiny application within an R Markdown document using the `shinyAppDir` function. This example embeds a Shiny application located in another directory:
+Visão geral {data-orientation=rows}
+===
 
-```{r tabsets, echo=FALSE}
-shinyAppDir(
-  system.file("examples/06_tabsets", package = "shiny"),
-  options = list(
-    width = "100%", height = 550
-  )
-)
+O objetivo deste dashboard é resumir os resultados da PCO da Empresa X
+
+Row 
+-----------------------------------------------------------------------
+### Número de respostas
+```{r}
+valueBox(value = 10, color = "#D0EBE8")
 ```
 
-Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
+### Número de perguntas
+```{r}
+valueBox(value = 86, color = "#D0EBE8")
+```
 
-You can also use the `shinyApp` function to define an application inline rather then in an external directory.
+### Nota final 
+```{r}
+valueBox(paste(round((mean(dados$media)), 2), '/ 5'), color = "#D0EBE8")
+```
+ 
+Row {data-width=500}
+-----------------------------------------------------------------------
 
-In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
+### Nota média por categoria de pergunta
+
+```{r}
+categ <- dados %>% 
+  group_by(Categoria) %>% 
+  summarise(media = mean(media))
+
+renderPlotly({
+  grafico = ggplot(categ, aes(x = Categoria, y = media, fill = Categoria)) + 
+  geom_col() + 
+  labs(x = "Categoria",
+       y = "Nota média",
+       fill = "",
+       title = "Nota média por categoria de pergunta") +
+  theme(legend.position = "bottom", axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  scale_fill_manual(values = cores(length(unique(categ$Categoria))))
+  ggplotly(grafico)})
+
+```
 
 
+
+
+Dados por categoria {data-orientation=column}
+===
+```{r}
+selectInput("categoria", label = "Escolha a categoria: ", choices = unique(dados$Categoria), selected = "AUTONOMIA")
+
+
+```
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+
+### Nota média por pergunta, separado por categoria
+
+```{r}
+renderPlotly({
+  grafico = filter(dados, Categoria == input$categoria) %>%
+  ggplot(aes(x = Pergunta, y = media)) + 
+  geom_col(color = "white", fill = "#4fb6a7") + 
+  labs(x = "",
+       y = "Nota média",
+       title = "") + 
+      theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  geom_errorbar(aes(x=Pergunta, ymin=media-dp, ymax=media+dp), width=0.2, colour="#652177", alpha=0.9, size=1.5)
+  ggplotly(grafico)})
+
+```
+
+
+Row {data-width=350}
+-----------------------------------------------------------------------
+
+### Nota média da categoria
+
+```{r}
+renderValueBox({
+        valueBox(
+            value = mean(dados$media[dados$Categoria==input$categoria]), color = "#D0EBE8")
+        
+    })
+```
+
+### Maior nota média
+
+```{r}
+renderValueBox({
+        valueBox(
+            value = max(dados$media[dados$Categoria==input$categoria]), color = "#D0EBE8"
+        )
+    })
+```
+
+
+### Menor nota média
+
+```{r}
+renderValueBox({
+        valueBox(
+            value = min(dados$media[dados$Categoria==input$categoria]), color = "#D0EBE8"
+        )
+    })
+```
 
